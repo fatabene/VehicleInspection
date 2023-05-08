@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
     $lastname = $_POST['LASTNAME'];
     $phone = $_POST['PHONE'];
 
-    $conn = new mysqli('localhost', 'root', '', 'vehicleinspectionsystem', '3306');
+    $conn = new MySQL('localhost', 'root', '', 'vehicleinspectionsystem', '3306');
     
     if ($conn->connect_errno) {
         echo "Failed to connect to MySQL: " . $conn->connect_error;
