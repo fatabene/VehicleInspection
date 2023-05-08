@@ -1,7 +1,7 @@
 <?php
 function build_calendar($month, $year)
 {
-    $conn = new mysqli('192.168.1.88', 'root', '', 'vehicleinspectionsystem', '3306');
+    $conn = new mysqli('localhost', 'root', '', 'vehicleinspectionsystem', '3306');
 
     if ($conn->connect_errno) {
         echo "Failed to connect to MySQL: " . $conn->connect_error;
