@@ -3,11 +3,11 @@ function build_calendar($month, $year)
 {
    $url = parse_url(getenv('mysql://root:3tJjuqr3nLekRPJu1thG@containers-us-west-145.railway.app:7013/railway'));
 
-$host = $url['containers-us-west-145.railway.app'];
-$port = $url['7013'];
-$user = $url['root'];
-$password = $url['3tJjuqr3nLekRPJu1thG'];
-$database = ltrim($url['mysql://root:3tJjuqr3nLekRPJu1thG@containers-us-west-145.railway.app:7013/railway'], '/');
+$host = $url['host'];
+$port = $url['port'];
+$user = $url['user'];
+$password = $url['pass'];
+$database = ltrim($url['path'], '/');
 
 $conn = new mysqli($host, $user, $password, $database, $port);
 
