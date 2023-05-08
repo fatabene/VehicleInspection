@@ -9,12 +9,21 @@ if (isset($_POST['submit'])) {
     $lastname = $_POST['LASTNAME'];
     $phone = $_POST['PHONE'];
 
-    $conn = new msqli('localhost', 'root', '', 'vehicleinspectionsystem', '3306');
-    
-    if ($conn->connect_errno) {
-        echo "Failed to connect to MySQL: " . $conn->connect_error;
-        exit();
-    }
+  $url = parse_url(getenv('mysql://root:3tJjuqr3nLekRPJu1thG@containers-us-west-145.railway.app:7013/railway'));
+
+$host = $url['containers-us-west-145.railway.app'];
+$port = $url['7013'];
+$user = $url['root'];
+$password = $url['3tJjuqr3nLekRPJu1thG'];
+$database = ltrim($url['mysql://root:3tJjuqr3nLekRPJu1thG@containers-us-west-145.railway.app:7013/railway'], '/');
+
+$conn = new mysqli($host, $user, $password, $database, $port);
+
+if ($conn->connect_errno) {
+    echo "Failed to connect to MySQL: " . $conn->connect_error;
+    exit();
+}
+
     
 
     $sql = "INSERT INTO vehicleinspection_bookings_record(FIRSTNAME, LASTNAME, PHONE, DATE)VALUES('$firstname', '$lastname', ' $phone', '$date')";
