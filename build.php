@@ -1,12 +1,20 @@
 <?php
 function build_calendar($month, $year)
 {
-    $conn = new MySQL('localhost', 'root', '', 'vehicleinspectionsystem', '3306');
+   $url = parse_url(getenv('mysql://root:3tJjuqr3nLekRPJu1thG@containers-us-west-145.railway.app:7013/railway'));
 
-    if ($conn->connect_errno) {
-        echo "Failed to connect to MySQL: " . $conn->connect_error;
-        exit();
-    }
+$host = $url['containers-us-west-145.railway.app'];
+$port = $url['7013'];
+$user = $url['root'];
+$password = $url['3tJjuqr3nLekRPJu1thG'];
+$database = ltrim($url['mysql://root:3tJjuqr3nLekRPJu1thG@containers-us-west-145.railway.app:7013/railway'], '/');
+
+$conn = new mysqli($host, $user, $password, $database, $port);
+
+if ($conn->connect_errno) {
+    echo "Failed to connect to MySQL: " . $conn->connect_error;
+    exit();
+}
 
     $stmt = $conn->prepare("SELECT * FROM vehicleinspection_bookings_record WHERE MONTH(DATE) = ? AND YEAR(DATE) = ?");
     $stmt->bind_param('ss', $month, $year);
