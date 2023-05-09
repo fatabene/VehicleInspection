@@ -22,15 +22,41 @@ if ($conn->connect_errno) {
     exit();
 }
 
+    // Starta en transaktion
+    $conn->autocommit(FALSE);
 
-    
+    // Sätt lås på tabellen för att förhindra samtidiga bokningar
+    $conn->query("LOCK TABLES vehicleinspection_bookings_record WRITE");
 
-    $sql = "INSERT INTO vehicleinspection_bookings_record(FIRSTNAME, LASTNAME, PHONE, DATE)VALUES('$firstname', '$lastname', ' $phone', '$date')";
+    // Kontrollera om tiden redan är upptagen
+    $checkQuery = "SELECT * FROM vehicleinspection_bookings_record WHERE DATE = '$date' FOR UPDATE";
 
-    if($conn->query($sql)){
-        $message = "<div class='alert alert-success'>Booking successful</div>";
-    }else{
-        $message = "<div class='alert alert-danger'>Booking failed</div>";
+    $result = $conn->query($checkQuery);
+
+
+    if ($result && $result->num_rows > 0) {
+        // Tiden är redan upptagen, avbryt transaktionen och ge felmeddelande
+        $conn->rollback();
+        $conn->query("UNLOCK TABLES");
+
+        $message = "<div class='alert alert-danger'>The selected time is already booked. Please choose a different time.</div>";
+    } else {
+        // Tiden är tillgänglig, utför bokningen
+        $sql = "INSERT INTO vehicleinspection_bookings_record(FIRSTNAME, LASTNAME, PHONE, DATE) VALUES('$firstname', '$lastname', '$phone', '$date')";
+
+        if ($conn->query($sql)) {
+            // Bokningen lyckades, släpp låset och bekräfta transaktionen
+            $conn->commit();
+            $conn->query("UNLOCK TABLES");
+
+            $message = "<div class='alert alert-success'>Booking successful</div>";
+        } else {
+            // Bokningen misslyckades, ångra transaktionen och släpp låset
+            $conn->rollback();
+            $conn->query("UNLOCK TABLES");
+
+            $message = "<div class='alert alert-danger'>Booking failed</div>";
+        }
     }
 }
 ?>
