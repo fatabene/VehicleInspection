@@ -31,7 +31,7 @@ if ($conn->connect_errno) {
     
 
 
-    $daysOfWeek = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday(closed)', 'Sunday(closed)');
+    $daysOfWeek = array('Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday(closed)', 'Sunday(closed)', 'Monday');
 
     $firstDayOfMonth = mktime(0, 0, 0, (int)$month, 1, $year);
     $numberDays = date('t', $firstDayOfMonth);
