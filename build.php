@@ -1,6 +1,6 @@
 <?php
 //session_start();
-    // Check if the user is logged in
+{// Check if the user is logged in
     $isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] === true;
     session_start();
 
