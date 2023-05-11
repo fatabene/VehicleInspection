@@ -40,6 +40,7 @@ if ($conn->connect_errno) {
     $dayOfWeek = $dateComponents['wday'];
 
     $calendar = "<table class='table table-bordered'>";
+    $calendar .= "<center><h2 class='mb-4'>Open Monday to Friday 9am - 5pm</h2>";
      $calendar .= "<center><a href='my_bookings.php' class='btn btn-primary'>Mina bokningar</a>";
     $calendar .= "<center><h2 class='mb-4'>Open Monday to Friday 9am - 5pm</h2>";
     $calendar .= "<a class='btn btn-xs btn-primary' href='?month=" . date('m', mktime(0, 0, 0, (int)$month - 1, 1, $year)) . "&year=" . date('Y', mktime(0, 0, 0,  (int)$month - 1, 1, $year)) . "'>Previous Month</a> ";
