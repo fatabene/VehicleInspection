@@ -1,4 +1,11 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Vehicle Inspection Booking System</title>
+</head>
+<body>
       
 <?php
 $host = 'containers-us-west-145.railway.app';
