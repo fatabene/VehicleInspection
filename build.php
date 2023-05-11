@@ -90,7 +90,7 @@ function build_calendar($month, $year)
     $year = date('Y');
 
     $firstDayOfMonth = mktime(0, 0, 0,
-    $firstDayOfMonth = mktime(0, 0, 0, (int)$month, 1, $year);
+    $firstDayOfMonth = mktime(0, 0, 0, (int)$month, 1, $year));
     $numberDays = date('t', $firstDayOfMonth);
     $dateComponents = getdate($firstDayOfMonth);
     $monthName = $dateComponents['month'];
