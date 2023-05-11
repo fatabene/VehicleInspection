@@ -44,7 +44,6 @@ if ($conn->connect_errno) {
     $calendar .= "<a class='btn btn-xs btn-primary' href='?month=" . date('m', mktime(0, 0, 0, (int)$month - 1, 1, $year)) . "&year=" . date('Y', mktime(0, 0, 0,  (int)$month - 1, 1, $year)) . "'>Previous Month</a> ";
     $calendar .= " <a class='btn btn-xs btn-success' href='?month=" . date('m') . "&year=" . date('Y') . "'>Current Month</a> ";
     $calendar .= "<a class='btn btn-xs btn-primary' href='?month=" . date('m', mktime(0, 0, 0,  (int)$month + 1, 1, $year)) . "&year=" . date('Y', mktime(0, 0, 0,  (int)$month + 1, 1, $year)) . "'>Next Month</a></center><br>";
-    
     $calendar .= "<left><h3 class='mb-4'>$monthName $year</h3>";
 
 
