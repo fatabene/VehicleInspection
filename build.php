@@ -1,4 +1,3 @@
-
 <?php
 function build_calendar($month, $year)
 {
