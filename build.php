@@ -141,7 +141,7 @@ function build_calendar($month, $year)
         } elseif (in_array($date, $bookings)) {
             $calendar .= "<td class='$today'><h4>$currentDay
             // Display booked date with a link to booking details
-            $calendar .= "<a href='booking_details.php?date=$date'>$currentDay</a></h4>";
+            $calendar .= "<'a href='booking_details.php?date=$date'>$currentDay</a></h4>";
 
             // Add any additional styling or information for booked dates
             // For example, you can add a badge indicating the booking status
