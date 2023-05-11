@@ -1,21 +1,72 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Vehicle Inspection Booking System</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Responsive Example</title>
+  <style>
+    .custom-card {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container-fluid p-5">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert" style="background: #17a2b8; color: #fff; border-color: #64e9f1;">
-                    <h1 class="display-1 text-center" style="font-size: 40px">Vehicle inspection Motor AB</h1>
-                </div>
-            </div>
-        </div>     
+  <div class="container">
+    <h1>Responsive Example</h1>
+
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card custom-card">
+          <img src="image1.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title">Card 1</h5>
+            <p class="card-text">This is a sample card.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card custom-card">
+          <img src="image2.jpg" class="card-img-top" alt="Image 2">
+          <div class="card-body">
+            <h5 class="card-title">Card 2</h5>
+            <p class="card-text">This is another sample card.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card custom-card">
+          <img src="image3.jpg" class="card-img-top" alt="Image 3">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">This is a third sample card.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card custom-card">
+          <img src="image4.jpg" class="card-img-top" alt="Image 4">
+          <div class="card-body">
+            <h5 class="card-title">Card 4</h5>
+            <p class="card-text">This is the final sample card.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+  
 <?php
 $host = 'containers-us-west-145.railway.app';
 $port = '7013';
