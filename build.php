@@ -33,8 +33,8 @@ if ($conn->connect_errno) {
 
 
     $daysOfWeek = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday(closed)', 'Sunday(closed)');
-   //## $month = date('m');
-  // ##$year = date('Y');
+    $month = date('m');
+    $year = date('Y');
 
     $firstDayOfMonth = mktime(0, 0, 0, (int)$month, 1, $year);
     $numberDays = date('t', $firstDayOfMonth);
