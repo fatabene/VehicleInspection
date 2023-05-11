@@ -89,4 +89,4 @@ function build_calendar($month, $year)
     $month = date('m');
     $year = date('Y');
 
-    $firstDayOfMonth = mktime(0, 0, 
+    $firstDayOfMonth = mktime(0, 0,)
