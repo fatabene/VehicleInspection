@@ -1,12 +1,8 @@
-//<?php
-session_start();
-
-function build_calendar($month, $year)
-{
-    // Existing code for building the calendar...
-
+<?php
+//session_start();
     // Check if the user is logged in
     $isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] === true;
+    session_start();
 
     // Check if the user submitted the login form
     if (isset($_POST['username']) && isset($_POST['password'])) {
