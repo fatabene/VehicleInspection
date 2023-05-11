@@ -163,3 +163,4 @@ if ($conn->connect_errno) {
     $calendar .= "</table>";
     echo $calendar;
 }
+}
