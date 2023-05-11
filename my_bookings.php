@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>My Bookings</title>
+</head>
+<body>
+    <div class="container my-4 p-3" style="background-color: #74d2e1;">
+        <h1 class="display-1 text-center my-2" style="font-size: 40px; background: #74d2e1; color: #000; border-color: #64e9f1; padding: 6px;">My Bookings</h1>
+        <div class="row">
+            <div class="col-md-12">
 <?php
 $host = 'containers-us-west-145.railway.app';
 $port = '7013';
