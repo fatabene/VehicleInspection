@@ -73,7 +73,7 @@ if ($conn->connect_errno) {
 <body>
     <div class="container my-4 p-3" style="background-color: #74d2e1;">
         <h1 class="display-1 text-center my-2" style="font-size: 40px; background: #74d2e1; color: #000; border-color: #64e9f1; padding: 6px;">Book your appointment for <?php echo date('m/d/Y', strtotime($date)); ?>: </h1>
-        //<a href="my_bookings.php" class="btn btn-primary">Mina bokningar</a>
+  
 
         <div class="row">
             <div class="col-md-12">
