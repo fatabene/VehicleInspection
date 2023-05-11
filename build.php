@@ -51,11 +51,7 @@ function build_calendar($month, $year)
     // Existing code for retrieving bookings and rendering the calendar...
 }
 
-// Call the build_calendar function with the appropriate arguments
-$currentMonth = date('m');
-$currentYear = date('Y');
-build_calendar($currentMonth, $currentYear);
-?>
+
 
 <?php
 function build_calendar($month, $year)
