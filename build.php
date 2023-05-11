@@ -46,10 +46,6 @@ function build_calendar($month, $year)
         return; // Stop execution of the function
     }
 
-    // Continue with building the calendar if the user is logged in
-
-    // Existing code for retrieving bookings and rendering the calendar...
-}
 
 
 
