@@ -1,4 +1,4 @@
-<?php
+//<?php
 session_start();
 
 function build_calendar($month, $year)
@@ -49,7 +49,7 @@ function build_calendar($month, $year)
 
 
 
-//<?php
+<?php
 //function build_calendar($month, $year)
 {
  $host = 'containers-us-west-145.railway.app';
