@@ -1,8 +1,9 @@
+session_start();
 <?php
 //session_start();
 {// Check if the user is logged in
     $isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] === true;
-    session_start();
+    //session_start();
 
     // Check if the user submitted the login form
     if (isset($_POST['username']) && isset($_POST['password'])) {
